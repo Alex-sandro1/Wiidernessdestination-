@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilderness Destinations Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Wilderness Destinations Form</h1>
+    <p>Click the button below to launch the multi-step enquiry form.</p>
+    <button id="open-enquiry-btn">Open Enquiry Form</button>
+
+    <div id="enquiry-modal" class="modal">
+
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <div class="progress-bar">
+            <div class="step active" id="progress-step-1">
+                <div class="step-number">1</div>
+                <div class="step-title">Interests</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step" id="progress-step-2">
+                <div class="step-number">2</div>
+                <div class="step-title">Travel Dates</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step" id="progress-step-3">
+                <div class="step-number">3</div>
+                <div class="step-title">Who</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="step" id="progress-step-4">
+                <div class="step-number">4</div>
+                <div class="step-title">Your Details</div>
+            </div>
+        </div>
+
+        <form id="multi-step-form">
+            <div class="form-step active" id="form-step-1">
+                <h2>Let's start with your travel interests...</h2>
+                <p>You can select more than one</p>
+                <div class="interests-grid">
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="botswana"><span>Botswana</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="kenya"><span>Kenya</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="namibia"><span>Namibia</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="rwanda"><span>Rwanda</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="south-africa"><span>South Africa</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="tanzania"><span>Tanzania</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="zambia"><span>Zambia</span></label>
+                    <label class="interest-option"><input type="checkbox" name="interest[]" value="zimbabwe"><span>Zimbabwe</span></label>
+                </div>
+                <div class="form-navigation">
+                    <button type="button" class="next-btn">Continue</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="form-step-2">
+                <h2>When are you thinking of travelling?</h2>
+                <div class="fields-row">
+                    <div class="field-group">
+                        <label for="month">Month</label>
+                        <select id="month" name="month"><option value="">Select Month</option><option value="jan">January</option><option value="feb">February</option><option value="mar">March</option></select>
+                    </div>
+                    <div class="field-group">
+                        <label for="year">Year</label>
+                        <select id="year" name="year"><option value="">Select Year</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select>
+                    </div>
+                </div>
+                <p class="small-text">Are your dates flexible? <strong>Yes</strong></p>
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">Back</button>
+                    <button type="button" class="next-btn">Continue</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="form-step-3">
+                 <h2>Who is travelling?</h2>
+                 <div class="fields-row">
+                    <div class="field-group">
+                        <label for="adults">Adults (16+)</label>
+                        <input type="number" id="adults" name="adults" value="2" min="1">
+                    </div>
+                    <div class="field-group">
+                        <label for="children">Children (0-15)</label>
+                        <input type="number" id="children" name="children" value="0" min="0">
+                    </div>
+                </div>
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">Back</button>
+                    <button type="button" class="next-btn">Continue</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="form-step-4">
+                <h2>Your Details</h2>
+                <div class="fields-row">
+                    <div class="field-group"><label for="first-name">First Name</label><input type="text" id="first-name" name="first-name"></div>
+                    <div class="field-group"><label for="last-name">Last Name</label><input type="text" id="last-name" name="last-name"></div>
+                </div>
+                <div class="fields-row">
+                    <div class="field-group"><label for="email">Email</label><input type="email" id="email" name="email"></div>
+                    <div class="field-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone"></div>
+                </div>
+                 <div class="fields-row">
+                    <div class="field-group full-width"><label for="country">Country of Residence</label><input type="text" id="country" name="country"></div>
+                </div>
+                <div class="form-navigation">
+                    <button type="button" class="back-btn">Back</button>
+                    <button type="submit" class="submit-btn">Submit Enquiry</button>
+                </div>
+            </div>
+
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
